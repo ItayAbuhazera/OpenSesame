@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Enables static site generation
+  output: 'export',
   basePath: process.env.NODE_ENV === 'production' ? '/OpenSesame' : '',
   images: {
-    unoptimized: true
+    unoptimized: true,
   },
   reactStrictMode: true,
 };
