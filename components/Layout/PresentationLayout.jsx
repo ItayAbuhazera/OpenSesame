@@ -12,12 +12,25 @@ import { GAOverviewSlide } from '../Slides/GAOverviewSlide';
 import { GAComponentsSlide } from '../Slides/GAcomponentSlide';
 import { GAProcessSlide } from '../Slides/GAProcessSlide';
 import { PopulationEncodingSlide } from '../Slides/PopulationEncodingSlide';
-import { ResultsComparisonSlide } from '../Slides/ResultsComparisonSlide';
 import { FitnessFunctionSlide } from '../Slides/FitnessFunctionSlide';
+
+// --------------------------------------
+// New slides you have/will create:
+import { SelectionSlide } from '../Slides/SelectionSlide';
+import { CrossoverMutationSlide } from '../Slides/CrossoverMutationSlide';
+import { ElitismSlide } from '../Slides/ElitismSlide';
+import { AssemblingSlide } from '../Slides/AssemblingSlide';
+import { ResultsSlide } from '../Slides/ResultsSlide';
+import { ResultsComparisonSlide } from '../Slides/ResultsComparisonSlide';
+import { DiscussionSlide } from '../Slides/DiscussionSlide';
+import { FutureWorkSlide } from '../Slides/FutureWorkSlide';
+import { ConclusionSlide } from '../Slides/ConclusionSlide';
+
 
 
 export function PresentationLayout({ currentSlide, setCurrentSlide }) {
   const slides = [
+    // Existing slides
     { component: TitleSlide },
     { component: UnderstandingSlide },
     { component: WhyImportantSlide },
@@ -32,7 +45,19 @@ export function PresentationLayout({ currentSlide, setCurrentSlide }) {
     { component: GAProcessSlide },
     { component: PopulationEncodingSlide },
     { component: FitnessFunctionSlide },
+
+    // --------------------------------------
+    // NEW SLIDES inserted right after FitnessFunctionSlide
+    { component: SelectionSlide },
+    { component: CrossoverMutationSlide },
+    { component: ElitismSlide },
+    { component: AssemblingSlide },
+    { component: ResultsSlide },
     { component: ResultsComparisonSlide },
+    { component: DiscussionSlide },
+    { component: FutureWorkSlide },
+    { component: ConclusionSlide },
+    // --------------------------------------
   ];
 
   return (
@@ -41,10 +66,10 @@ export function PresentationLayout({ currentSlide, setCurrentSlide }) {
       <div className="flex-grow">
         {slides[currentSlide].component()}
       </div>
-      
+
       {/* Navigation */}
       <div className="h-20 border-t border-slate-800 bg-slate-900/50">
-        <SlideControls 
+        <SlideControls
           currentSlide={currentSlide}
           setCurrentSlide={setCurrentSlide}
           totalSlides={slides.length}
@@ -53,3 +78,5 @@ export function PresentationLayout({ currentSlide, setCurrentSlide }) {
     </div>
   );
 }
+
+export default PresentationLayout;
