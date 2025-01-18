@@ -12,8 +12,8 @@ import { GAOverviewSlide } from '../Slides/GAOverviewSlide';
 import { GAComponentsSlide } from '../Slides/GAcomponentSlide';
 import { GAProcessSlide } from '../Slides/GAProcessSlide';
 import { PopulationEncodingSlide } from '../Slides/PopulationEncodingSlide';
-import { FitnessFunctionSlide } from '../Slides/FitnessFunctionSlide';
 import { ResultsComparisonSlide } from '../Slides/ResultsComparisonSlide';
+import { FitnessFunctionSlide } from '../Slides/FitnessFunctionSlide';
 
 
 export function PresentationLayout({ currentSlide, setCurrentSlide }) {
