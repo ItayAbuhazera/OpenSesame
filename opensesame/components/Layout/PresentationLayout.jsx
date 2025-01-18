@@ -9,6 +9,11 @@ import { BlackBoxSlide } from '../Slides/BlackBoxSlide';
 import { ComparisonSlide } from '../Slides/ComparisonSlide';
 import { ClassificationQuestionSlide } from '../Slides/ClassificationQuestionSlide';
 import { GAOverviewSlide } from '../Slides/GAOverviewSlide';
+import { GAComponentsSlide } from '../Slides/GAcomponentSlide';
+import { GAProcessSlide } from '../Slides/GAProcessSlide';
+import { PopulationEncodingSlide } from '../Slides/PopulationEncodingSlide';
+import { FitnessFunctionSlide } from '../Slides/FitnessFunctionSlide';
+import { ResultsComparisonSlide } from '../Slides/ResultsComparisonSlide';
 import { Card } from '@/components/ui/card';
 
 
@@ -24,6 +29,11 @@ export function PresentationLayout({ currentSlide, setCurrentSlide }) {
     { component: ComparisonSlide },
     { component: ClassificationQuestionSlide },
     { component: GAOverviewSlide },
+    { component: GAComponentsSlide },
+    { component: GAProcessSlide },
+    { component: PopulationEncodingSlide },
+    { component: FitnessFunctionSlide },
+    { component: ResultsComparisonSlide },
   ];
 
   return (
