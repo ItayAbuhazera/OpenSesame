@@ -1,32 +1,48 @@
 name: Deploy to GitHub Pages
 
+# Trigger on pushes to main (and also allow manual dispatch)
 on:
   push:
     branches:
       - main
   workflow_dispatch:
 
+# This ensures the GitHub Actions bot has write permissions to push to gh-pages
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
+      # 1. Check out the repository so we can access the code
       - name: Checkout Repository
         uses: actions/checkout@v3
 
+      # 2. Set up Node.js so we can run npm, etc.
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: 18
 
+      # 3. Install all dependencies using package-lock.json (faster/more reliable than npm install)
       - name: Install Dependencies
         run: npm ci
 
+      # 4. Build the project, which creates an optimized Next.js build
+      #    Because of "output: 'export'" in next.config.js, this also
+      #    exports static files into /out automatically.
       - name: Build the Project
         run: npm run build
 
+      # 5. Deploy to gh-pages branch using JamesIves/github-pages-deploy-action
+      #    This action automatically configures git, commits the /out folder,
+      #    and pushes it to gh-pages.
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          # The branch name you want the compiled site on
           branch: gh-pages
+
+          # The folder with your static site (Next.js by default puts it in `out`)
           folder: out
