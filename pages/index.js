@@ -5,7 +5,7 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div>
       <PresentationLayout 
         currentSlide={currentSlide}
         setCurrentSlide={setCurrentSlide}
