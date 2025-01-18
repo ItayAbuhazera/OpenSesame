@@ -14,7 +14,6 @@ import { GAProcessSlide } from '../Slides/GAProcessSlide';
 import { PopulationEncodingSlide } from '../Slides/PopulationEncodingSlide';
 import { FitnessFunctionSlide } from '../Slides/FitnessFunctionSlide';
 import { ResultsComparisonSlide } from '../Slides/ResultsComparisonSlide';
-import { Card } from '@/components/ui/card';
 
 
 export function PresentationLayout({ currentSlide, setCurrentSlide }) {
