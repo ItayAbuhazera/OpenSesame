@@ -17,12 +17,12 @@ export function CrossoverMutationSlide() {
             className="bg-slate-800/40 p-6 rounded-lg hover:bg-slate-800/60 transition-all duration-300"
             style={{ animation: 'fadeIn 0.5s ease-out' }}
           >
-            <h3 className="text-xl text-white mb-2">Crossover (One-Point)</h3>
-            <p className="text-gray-300 text-lg">
+            <h3 className="text-2xl text-white mb-2">Crossover (One-Point)</h3>
+            <p className="text-gray-300 text-xl">
               Split two parent prompts at index ℓ, swap segments → offspring
             </p>
             <div className="bg-slate-700/60 p-3 rounded-md mt-2">
-              <pre className="font-mono text-blue-300 text-sm">
+              <pre className="font-mono text-blue-300 text-md">
 {`O1 = [P1[:ℓ] || P2[ℓ:]]
 O2 = [P2[:ℓ] || P1[ℓ:]]`}
               </pre>
@@ -34,11 +34,20 @@ O2 = [P2[:ℓ] || P1[ℓ:]]`}
             className="bg-slate-800/40 p-6 rounded-lg hover:bg-slate-800/60 transition-all duration-300"
             style={{ animation: 'fadeIn 0.5s ease-out 0.2s' }}
           >
-            <h3 className="text-xl text-white mb-2">Mutation</h3>
-            <p className="text-gray-300 text-lg">
+            <h3 className="text-2xl text-white mb-2">Mutation</h3>
+            <p className="text-gray-300 text-xl">
               Randomly replace tokens (at low prob) to maintain diversity.
             </p>
           </div>
+        </div>
+
+        {/* adding an image that explains the crossover and mutation */}
+        <div className="flex justify-center mt-6">
+          <img
+            src="crossover-mutation.png"
+            alt="Crossover and Mutation"
+            className="w-2/3"
+          />
         </div>
 
         <style jsx>{`
