@@ -13,7 +13,7 @@ import { GAComponentsSlide } from '../Slides/GAcomponentSlide';
 import { GAProcessSlide } from '../Slides/GAProcessSlide';
 import { PopulationEncodingSlide } from '../Slides/PopulationEncodingSlide';
 import { ResultsComparisonSlide } from '../Slides/ResultsComparisonSlide';
-import { FitnessFunctionSlide } from '../Slides/FitnessFunctionSlide';
+// import { FitnessFunctionSlide } from '../Slides/FitnessFunctionSlide';
 
 
 export function PresentationLayout({ currentSlide, setCurrentSlide }) {
@@ -31,7 +31,7 @@ export function PresentationLayout({ currentSlide, setCurrentSlide }) {
     { component: GAComponentsSlide },
     { component: GAProcessSlide },
     { component: PopulationEncodingSlide },
-    { component: FitnessFunctionSlide },
+    // { component: FitnessFunctionSlide },
     { component: ResultsComparisonSlide },
   ];
 
