@@ -37,7 +37,7 @@ export function FitnessFunctionSlide() {
             </h3>
             
             {/* White-Box Approach */}
-            <div className="space-y-2">
+            {/* <div className="space-y-2">
               <h4 className="text-lg font-medium text-blue-400">
                 White-Box Approach:
               </h4>
@@ -46,7 +46,7 @@ export function FitnessFunctionSlide() {
                   ℒ_white-box = -log LLM(y_target | x_user || x_adv)
                 </pre>
               </div>
-            </div>
+            </div> */}
 
             {/* Black-Box Approach */}
             <div className="space-y-2">
@@ -55,7 +55,7 @@ export function FitnessFunctionSlide() {
               </h4>
               <div className="bg-slate-800/50 rounded-lg p-4">
                 <pre className="font-mono text-green-400">
-                  ℒ_black-box = -ℒ_cos(f_embed(LLM(x_user || x_adv)), f_embed(y_target))
+                  ℒ = -ℒ_cos(f_embed(LLM(x_user || x_adv)), f_embed(y_target))
                 </pre>
               </div>
             </div>
