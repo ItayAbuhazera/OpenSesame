@@ -1,12 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // Enable static exports
-  basePath: '/OpenSesame', // Your repository name
-  assetPrefix: '/OpenSesame/', // Your repository name with trailing slash
+  output: 'export',
+  basePath: '/OpenSesame',
+  assetPrefix: '/OpenSesame/',
+  trailingSlash: true,  // Add this
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
+    domains: [], // Add any external image domains if needed
   },
 }
 
 module.exports = nextConfig
-
