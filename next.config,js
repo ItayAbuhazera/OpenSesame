@@ -3,10 +3,13 @@ const nextConfig = {
   output: 'export',
   basePath: '/OpenSesame',
   assetPrefix: '/OpenSesame/',
-  trailingSlash: true,  // Add this
+  trailingSlash: true,
   images: {
     unoptimized: true,
-    domains: [], // Add any external image domains if needed
+  },
+  // Add this to handle images and other static files
+  publicRuntimeConfig: {
+    basePath: '/OpenSesame',
   },
 }
 
