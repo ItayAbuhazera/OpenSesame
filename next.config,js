@@ -1,19 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Ensures Next.js outputs static HTML in the `out/` folder.
-  output: 'export',
-  
-  // Set the base path only in production, matching your GitHub repo name
-  // (For example, '/OpenSesame'). If you do not want any sub-path, remove basePath entirely.
-  basePath: process.env.NODE_ENV === 'production' ? '/OpenSesame' : '',
-
-  // If you have images, ensure they're exported without optimization issues
+  output: 'export',  // Enable static exports
+  basePath: '/OpenSesame', // Your repository name
+  assetPrefix: '/OpenSesame/', // Your repository name with trailing slash
   images: {
-    unoptimized: true,
+    unoptimized: true, // Required for static export
   },
+}
 
-  // Enforce best practices
-  reactStrictMode: true,
-};
+module.exports = nextConfig
 
-module.exports = nextConfig;

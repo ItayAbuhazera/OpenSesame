@@ -1,48 +1,44 @@
 name: Deploy to GitHub Pages
 
-# Trigger on pushes to main (and also allow manual dispatch)
 on:
   push:
     branches:
-      - main
-  workflow_dispatch:
+      - main  # or your default branch
 
-# This ensures the GitHub Actions bot has write permissions to push to gh-pages
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      # 1. Check out the repository so we can access the code
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      # 2. Set up Node.js so we can run npm, etc.
-      - name: Set up Node.js
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-
-      # 3. Install all dependencies using package-lock.json (faster/more reliable than npm install)
+          node-version: '18'
+          
       - name: Install Dependencies
-        run: npm ci
-
-      # 4. Build the project, which creates an optimized Next.js build
-      #    Because of "output: 'export'" in next.config.js, this also
-      #    exports static files into /out automatically.
-      - name: Build the Project
+        run: npm install
+        
+      - name: Build
         run: npm run build
-
-      # 5. Deploy to gh-pages branch using JamesIves/github-pages-deploy-action
-      #    This action automatically configures git, commits the /out folder,
-      #    and pushes it to gh-pages.
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+        
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          # The branch name you want the compiled site on
-          branch: gh-pages
+          path: ./out
 
-          # The folder with your static site (Next.js by default puts it in `out`)
-          folder: out
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
