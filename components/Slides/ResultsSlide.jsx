@@ -26,8 +26,11 @@ export function ResultsSlide() {
           {/* Attack Success Rate */}
           <div
             className="bg-slate-800/40 p-6 rounded-lg transition-all duration-300 hover:bg-slate-800/60"
-            style={{ animation: 'slideIn 0.5s ease-out' }}
+            style={{ animation: 'fadeIn 0.5s ease-out' }}
           >
+            <h3 className="text-xl font-semibold text-white mb-3">
+              Attack Success Rate (ASR)
+            </h3>
             <p className="text-gray-300 text-lg">
               <strong>Attack Success Rate (ASR):</strong> Achieves ≈ 95–99% on Vicuna-7b &amp; LLaMA2-7b-chat.
             </p>
@@ -40,7 +43,7 @@ export function ResultsSlide() {
           {/* Example Table */}
           <div
             className="bg-slate-800/40 p-6 rounded-lg transition-all duration-300 hover:bg-slate-800/60"
-            style={{ animation: 'slideIn 0.5s ease-out 0.2s' }}
+            style={{ animation: 'fadeIn 0.5s ease-out 0.2s' }}
           >
             <p className="text-gray-300 text-lg mb-2">Example performance:</p>
             <div className="bg-slate-700/60 p-4 rounded-md">
@@ -60,14 +63,14 @@ LLaMA-7b-chat  | 16.3%      | ~98-99%`}
 
         {/* Simple slide-in animation */}
         <style jsx>{`
-          @keyframes slideIn {
+          @keyframes fadeIn {
             from {
               opacity: 0;
-              transform: translateX(20px);
+              transform: translateY(10px);
             }
             to {
               opacity: 1;
-              transform: translateX(0);
+              transform: translateY(0);
             }
           }
         `}</style>
@@ -76,4 +79,4 @@ LLaMA-7b-chat  | 16.3%      | ~98-99%`}
   );
 }
 
-export default ResultsSlide;
+export default ResultsSlide;

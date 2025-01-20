@@ -6,12 +6,14 @@ export function CrossoverMutationSlide() {
   return (
     <SlideWrapper>
       <div className="flex flex-col h-full p-8">
+        {/* Header */}
         <div className="flex items-center gap-3 mb-6">
           <Shuffle className="w-8 h-8 text-green-400" />
           <h2 className="text-4xl font-bold text-white">Crossover & Mutation</h2>
         </div>
 
-        <div className="flex-1 space-y-5">
+        {/* Content */}
+        <div className="flex-1 space-y-6">
           {/* Crossover */}
           <div
             className="bg-slate-800/40 p-6 rounded-lg hover:bg-slate-800/60 transition-all duration-300"
@@ -27,6 +29,9 @@ export function CrossoverMutationSlide() {
 O2 = [P2[:ℓ] || P1[ℓ:]]`}
               </pre>
             </div>
+            <p className="text-gray-300 text-sm mt-2">
+              <strong>Purpose:</strong> Combines traits from two parents to explore new solutions.
+            </p>
           </div>
 
           {/* Mutation */}

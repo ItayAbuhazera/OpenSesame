@@ -23,7 +23,7 @@ export function AssemblingSlide() {
         {/* Slide content */}
         <div className="flex-1 space-y-5 text-gray-300 text-2xl">
           <div
-            className="bg-slate-800/40 p-6 rounded-lg hover:bg-slate-800/60"
+            className="bg-slate-800/40 p-6 rounded-lg hover:bg-slate-800/60 transition-all duration-300"
             style={{ animation: 'fadeIn 0.5s ease-out' }}
           >
             <ol className="list-decimal ml-10 space-y-5">
@@ -36,6 +36,17 @@ export function AssemblingSlide() {
             <p className="mt-4 text-md text-gray-400">
               We used <strong>MPNet</strong> (and other embedders) to approximate fitness in a purely black-box manner 
               (no gradients, no model internals).
+            </p>
+          </div>
+
+          {/* Conclusion */}
+          <div
+            className="bg-slate-800/40 p-6 rounded-lg hover:bg-slate-800/60 transition-all duration-300"
+            style={{ animation: 'fadeIn 0.5s ease-out 0.2s' }}
+          >
+            <h3 className="text-xl font-semibold text-pink-400 mb-2">Goal:</h3>
+            <p>
+            In this way, we utilize a genetic algorithm to identify the most effective offensive suffix with the best results.
             </p>
           </div>
         </div>

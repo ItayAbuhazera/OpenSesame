@@ -13,6 +13,7 @@ import { GAComponentsSlide } from '../Slides/GAcomponentSlide';
 import { GAProcessSlide } from '../Slides/GAProcessSlide';
 import { PopulationEncodingSlide } from '../Slides/PopulationEncodingSlide';
 import { FitnessFunctionSlide } from '../Slides/FitnessFunctionSlide';
+import { EmbeddingFunctionSlide } from '../Slides/EmbeddingFunctionSlide';
 
 // --------------------------------------
 // New slides you have/will create:
@@ -25,7 +26,7 @@ import { ResultsComparisonSlide } from '../Slides/ResultsComparisonSlide';
 import { DiscussionSlide } from '../Slides/DiscussionSlide';
 import { FutureWorkSlide } from '../Slides/FutureWorkSlide';
 import { ConclusionSlide } from '../Slides/ConclusionSlide';
-
+import { ExperimentResults1, ExperimentResults2 } from '../Slides/ResultsSlides';
 
 
 export function PresentationLayout({ currentSlide, setCurrentSlide }) {
@@ -39,12 +40,13 @@ export function PresentationLayout({ currentSlide, setCurrentSlide }) {
     { component: WhiteBoxSlide },
     { component: BlackBoxSlide },
     { component: ComparisonSlide },
-    { component: ClassificationQuestionSlide },
     { component: GAOverviewSlide },
     { component: GAComponentsSlide },
     { component: GAProcessSlide },
+    { component: ClassificationQuestionSlide },
     { component: PopulationEncodingSlide },
     { component: FitnessFunctionSlide },
+    { component: EmbeddingFunctionSlide },
 
     // --------------------------------------
     // NEW SLIDES inserted right after FitnessFunctionSlide
@@ -53,6 +55,8 @@ export function PresentationLayout({ currentSlide, setCurrentSlide }) {
     { component: ElitismSlide },
     { component: AssemblingSlide },
     { component: ResultsSlide },
+    { component: ExperimentResults1 },
+    { component: ExperimentResults2 },
     { component: ResultsComparisonSlide },
     { component: DiscussionSlide },
     { component: FutureWorkSlide },

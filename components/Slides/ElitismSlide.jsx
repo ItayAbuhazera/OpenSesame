@@ -19,12 +19,13 @@ export function ElitismSlide() {
           <Crown className="w-8 h-8 text-purple-400" />
           <h2 className="text-4xl font-bold text-white">Elitism</h2>
         </div>
-        
+
         {/* Main content */}
         <div className="flex-1 space-y-6">
+          {/* Explanation */}
           <div
             className="bg-slate-800/40 rounded-lg p-6 transition-all duration-300 hover:bg-slate-800/60"
-            style={{ animation: 'slideIn 0.5s ease-out' }}
+            style={{ animation: 'fadeIn 0.5s ease-out' }}
           >
             <p className="text-gray-300 text-2xl mb-2">
               Preserve the top <em>e</em> individuals (lowest-loss prompts) across generations.
@@ -35,9 +36,10 @@ export function ElitismSlide() {
             </p>
           </div>
 
+          {/* Purpose */}
           <div
             className="bg-slate-800/40 rounded-lg p-6 transition-all duration-300 hover:bg-slate-800/60"
-            style={{ animation: 'slideIn 0.5s ease-out 0.2s' }}
+            style={{ animation: 'fadeIn 0.5s ease-out 0.2s' }}
           >
             <p className="text-yellow-300 text-lg font-mono">
               e = n / 5
@@ -50,14 +52,14 @@ export function ElitismSlide() {
 
         {/* Simple slide-in animation */}
         <style jsx>{`
-          @keyframes slideIn {
+          @keyframes fadeIn {
             from {
               opacity: 0;
-              transform: translateX(-20px);
+              transform: translateY(10px);
             }
             to {
               opacity: 1;
-              transform: translateX(0);
+              transform: translateY(0);
             }
           }
         `}</style>
@@ -66,4 +68,4 @@ export function ElitismSlide() {
   );
 }
 
-export default ElitismSlide;
+export default ElitismSlide;
