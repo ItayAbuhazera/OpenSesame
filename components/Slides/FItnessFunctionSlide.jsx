@@ -14,16 +14,16 @@ export function FitnessFunctionSlide() {
           </h2>
         </div>
 
-        <div className="flex-1 space-y-8">
+        <div className="flex-1 space-y-5">
           {/* Objective Section */}
           <div className="space-y-3">
             <h3 className="text-2xl font-semibold text-white">
               Objective
             </h3>
-            <p className="text-gray-300 mb-2">
+            <p className="text-gray-300 mb-2 text-lg">
               Align generated outputs to the target text:
             </p>
-            <div className="bg-slate-800/50 rounded-lg p-4">
+            <div className="bg-slate-800/50 rounded-lg p-4 text-md">
               <pre className="font-mono text-green-400">
                 "Sure, here is a..."
               </pre>
