@@ -6,46 +6,66 @@ export function ElitismSlide() {
   return (
     <SlideWrapper>
       <div className="flex flex-col h-full p-8">
+        {/* Header */}
         <div className="flex items-center gap-3 mb-6">
           <Crown className="w-8 h-8 text-purple-400" />
           <h2 className="text-4xl font-bold text-white">Elitism</h2>
         </div>
-        
+
+        {/* Content */}
         <div className="flex-1 space-y-6">
+          {/* Explanation */}
           <div
             className="bg-slate-800/40 rounded-lg p-6 transition-all duration-300 hover:bg-slate-800/60"
-            style={{ animation: 'slideIn 0.5s ease-out' }}
+            style={{ animation: 'fadeIn 0.5s ease-out' }}
           >
-            <p className="text-gray-300 text-lg mb-2">
-              Keep top <em>e</em> individuals from each generation unchanged.
-            </p>
+            <h3 className="text-2xl font-semibold text-white mb-3">
+              What is Elitism?
+            </h3>
             <p className="text-gray-300 text-lg">
-              Prevent losing best solutions to random crossover/mutation.
+              Elitism ensures that the top <strong>e</strong> individuals (best solutions) from each generation are carried forward unchanged.
             </p>
           </div>
 
+          {/* Purpose */}
           <div
             className="bg-slate-800/40 rounded-lg p-6 transition-all duration-300 hover:bg-slate-800/60"
-            style={{ animation: 'slideIn 0.5s ease-out 0.2s' }}
+            style={{ animation: 'fadeIn 0.5s ease-out 0.2s' }}
           >
-            <p className="text-yellow-300 text-sm font-mono">
+            <h3 className="text-2xl font-semibold text-white mb-3">
+              Why Use Elitism?
+            </h3>
+            <ul className="list-disc ml-6 text-gray-300 text-lg space-y-2">
+              <li>Prevents losing the best solutions during random crossover or mutation.</li>
+              <li>Stabilizes the population and accelerates convergence.</li>
+              <li>Improves the overall performance of the algorithm.</li>
+            </ul>
+          </div>
+
+          {/* Key Formula */}
+          <div
+            className="bg-slate-800/40 rounded-lg p-6 transition-all duration-300 hover:bg-slate-800/60"
+            style={{ animation: 'fadeIn 0.5s ease-out 0.4s' }}
+          >
+            <h3 className="text-xl font-mono text-yellow-300 mb-2">
               e = n / 5
-            </p>
-            <p className="text-gray-300 text-lg mt-2">
-              Stabilizes & speeds up convergence.
+            </h3>
+            <p className="text-gray-300 text-lg">
+              Where <strong>n</strong> is the population size, and <strong>e</strong> is the number of elite individuals preserved.
             </p>
           </div>
         </div>
 
+        {/* Animation */}
         <style jsx>{`
-          @keyframes slideIn {
+          @keyframes fadeIn {
             from {
               opacity: 0;
-              transform: translateX(-20px);
+              transform: translateY(10px);
             }
             to {
               opacity: 1;
-              transform: translateX(0);
+              transform: translateY(0);
             }
           }
         `}</style>
@@ -53,3 +73,5 @@ export function ElitismSlide() {
     </SlideWrapper>
   );
 }
+
+export default ElitismSlide;
