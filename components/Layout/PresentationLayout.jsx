@@ -1,3 +1,5 @@
+'use-client';
+
 import { SlideControls } from '../Navigation/SlideControls';
 import { TitleSlide } from '../Slides/TitleSlide';
 import { UnderstandingSlide } from '../Slides/UnderstandingSlide';

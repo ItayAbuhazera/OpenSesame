@@ -1,3 +1,5 @@
+'use-client';
+
 import { useState } from 'react';
 import { PresentationLayout } from '../components/Layout/PresentationLayout';
 

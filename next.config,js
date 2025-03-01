@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  output: 'standalone',
   basePath: '', // Remove the custom basePath
   assetPrefix: '', // Remove the assetPrefix
   trailingSlash: true,
