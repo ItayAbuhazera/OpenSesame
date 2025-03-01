@@ -1,16 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/OpenSesame',
-  assetPrefix: '/OpenSesame/',
+  basePath: '', // Remove the custom basePath
+  assetPrefix: '', // Remove the assetPrefix
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  // Add this to handle images and other static files
-  publicRuntimeConfig: {
-    basePath: '/OpenSesame',
-  },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
