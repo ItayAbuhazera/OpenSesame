@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Activity } from 'lucide-react';
 import { SlideWrapper } from '../Layout/SlideWrapper';

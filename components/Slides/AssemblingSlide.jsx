@@ -5,6 +5,7 @@
  * Emphasizes black-box queries, random-subset sampling for fitness,
  * and repeated iterations for universal jailbreak success.
  */
+'use client';
 
 import React from 'react';
 import { Layers } from 'lucide-react';

@@ -6,6 +6,7 @@
  *  - Transferability across models
  *  - Example table from the paper (Table 1) showing no-attack vs. with-attack rates.
  */
+'use client';
 
 import React from 'react';
 import { BarChart } from 'lucide-react';

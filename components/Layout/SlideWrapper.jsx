@@ -1,4 +1,6 @@
 // components/Layout/SlideWrapper.jsx
+'use client';
+
 import React from 'react';
 
 export function SlideWrapper({ children }) {

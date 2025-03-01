@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Sparkles, Target, Users, RefreshCw } from 'lucide-react';
 import { SlideWrapper } from '../Layout/SlideWrapper';

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Users, Target, GitBranch, Shuffle } from 'lucide-react';
 import { SlideWrapper } from '../Layout/SlideWrapper';

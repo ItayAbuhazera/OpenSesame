@@ -5,6 +5,7 @@
  * for universal black-box jailbreak attacks, following Lapid et al. (2024).
  * We emphasize tournament selection as in the paper's methodology (Section A.5).
  */
+'use client';
 
 import React from 'react';
 import { Filter } from 'lucide-react';

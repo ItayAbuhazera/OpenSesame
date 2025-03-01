@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Calculator, Database, Users } from 'lucide-react';
 import { SlideWrapper } from '../Layout/SlideWrapper';

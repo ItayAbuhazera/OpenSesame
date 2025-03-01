@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Box, Network } from 'lucide-react';
 import { SlideWrapper } from '../Layout/SlideWrapper';

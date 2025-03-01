@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Lock, Box, ArrowRight } from 'lucide-react';
 import { SlideWrapper } from '../Layout/SlideWrapper';

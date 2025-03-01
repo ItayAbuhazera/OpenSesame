@@ -5,6 +5,7 @@
  * preventing accidental loss of the best adversarial suffixes.
  * Follows the approach in Section A.7 of Lapid et al. (2024).
  */
+'use client';
 
 import React from 'react';
 import { Crown } from 'lucide-react';
