@@ -1,16 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone', // Changed from 'export'
-  // If your app is not at the root of the domain, you might need:
-  basePath: '',
-  // Make sure static assets can be found:
+  // For static sites deployed to Vercel, 'export' is usually better
+  output: 'export',
+  
+  // Remove basePath if your app is at the root
+  // basePath: '',
+  
+  // This is important - match it to your deployment path if not at root
+  // Typically, leave it empty for Vercel deployments
   assetPrefix: '',
-  // Disable image optimization if you're not using it:
+  
   images: {
     unoptimized: true
   },
-  // Ensure trailing slashes are consistent:
-  trailingSlash: true
+  
+  // This should be true for static exports
+  trailingSlash: true,
+  
+  // Add this to handle the static file routing
+  distDir: 'out'
 }
 
 module.exports = nextConfig
