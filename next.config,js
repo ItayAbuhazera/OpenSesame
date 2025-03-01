@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
-  basePath: '', // Remove the custom basePath
-  assetPrefix: '', // Remove the assetPrefix
-  trailingSlash: true,
+  output: 'standalone', // Changed from 'export'
+  // If your app is not at the root of the domain, you might need:
+  basePath: '',
+  // Make sure static assets can be found:
+  assetPrefix: '',
+  // Disable image optimization if you're not using it:
   images: {
-    unoptimized: true,
+    unoptimized: true
   },
+  // Ensure trailing slashes are consistent:
+  trailingSlash: true
 }
 
-module.exports = nextConfig;
+module.exports = nextConfig
